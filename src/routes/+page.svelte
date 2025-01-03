@@ -1,6 +1,6 @@
 <script>
-  import Hero from "../modules/hero.svelte";
+  import Background from "../modules/background.svelte";
   export let data;
 </script>
 
-<Hero {data}/>
+<Background {data}/>
