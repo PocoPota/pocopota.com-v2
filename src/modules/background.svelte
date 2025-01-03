@@ -1,12 +1,18 @@
 <script>
   export let data;
 </script>
-<img src={data.data.urls.full} alt={data.data.alternative_slugs.ja}>
+<div class="background" style="--bg-img-url: url({data.data.urls.full})"></div>
 
 <style lang="scss">
-  img{
+  .background{
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: var(--bg-img-url);
+    background-size: cover;
+    background-position: center;
   }
 </style>
