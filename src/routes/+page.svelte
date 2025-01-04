@@ -146,7 +146,18 @@
 </section>
 
 <section class="columns">
-  <div class="Banners"></div>
+  <div class="banners">
+    <div>
+      <a href="https://sites.google.com/view/happy-busy/" target="_blank">
+        <img src="/no-time.png" alt="時間ねぇー">
+      </a>
+    </div>
+    <div>
+      <a href="https://love.tsukuba-ac.net/" target="_blank">
+        <img src="/tsukuba-love2.png" alt="時間ねぇー">
+      </a>
+    </div>
+  </div>
 </section>
 
 <Background {data}/>
@@ -252,6 +263,22 @@
         width: 300px;
         img{
           width: 100%;
+        }
+      }
+    }
+  }
+
+  // columns
+  .columns{
+    .banners{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      div{
+        a{
+          img{
+            height: 40px;
+          }
         }
       }
     }
