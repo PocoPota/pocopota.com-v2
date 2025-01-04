@@ -22,6 +22,10 @@
     margin: 0;
   }
 
+  :global(img) {
+    vertical-align: top;
+}
+
   // base
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+JP&family=Roboto&display=swap');
   *{
