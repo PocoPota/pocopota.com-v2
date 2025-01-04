@@ -56,12 +56,81 @@
 <section class="works">
   <div class="sec-title">Works</div>
   <ul>
-    <li></li>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>作品名</div>
+        <div>簡単な作品説明をここに記入</div>
+      </div>
+    </li>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>作品名</div>
+        <div>簡単な作品説明をここに記入</div>
+      </div>
+    </li>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>作品名</div>
+        <div>簡単な作品説明をここに記入</div>
+      </div>
+    </li>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>作品名</div>
+        <div>簡単な作品説明をここに記入</div>
+      </div>
+    </li>
   </ul>
 </section>
 
 <section class="articles">
   <div class="sec-title">Articles</div>
+  <ul>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>記事タイトル</div>
+        <div>
+          <span>zenn.dev</span>
+          <span>2025/01/04</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>記事タイトル</div>
+        <div>
+          <span>zenn.dev</span>
+          <span>2025/01/04</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>記事タイトル</div>
+        <div>
+          <span>zenn.dev</span>
+          <span>2025/01/04</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>記事タイトル</div>
+        <div>
+          <span>zenn.dev</span>
+          <span>2025/01/04</span>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <section class="skills">
@@ -77,7 +146,7 @@
 </section>
 
 <section class="columns">
-  じかんねぇー
+  <div class="Banners"></div>
 </section>
 
 <Background {data}/>
@@ -89,14 +158,27 @@
 
   section{
     width: 950px;
-    margin: 0 auto;
+    margin: 150px auto;
+    .sec-title{
+      margin-bottom: 60px;
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+      font-family: "IBM Plex Mono", serif;
+      &::before{
+        content: '{ ';
+      }
+      &::after{
+        content: ' }';
+      }
+    }
   }
 
   // top
   .top{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
     gap: 50px;
     .icon{
       img{
@@ -117,7 +199,7 @@
           display: flex;
           align-items: center;
           margin-left: 10px;
-          font-size: 18px;
+          font-size: 20px;
           font-family: "IBM Plex Mono", serif;
         }
       }
@@ -134,6 +216,42 @@
             margin: 0;
             padding: 0;
           }
+        }
+      }
+    }
+  }
+
+  // works
+  .works{
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px;
+      list-style: none;
+      padding: 0;
+      li{
+        width: 300px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // articles
+  .articles{
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px;
+      list-style: none;
+      padding: 0;
+      li{
+        width: 300px;
+        img{
+          width: 100%;
         }
       }
     }
