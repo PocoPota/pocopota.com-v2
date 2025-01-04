@@ -1,20 +1,24 @@
 <script>
   export let data;
 
+  let displayRatio = 0;
+  $: blurRatio = `${displayRatio * 12}px`;
+
   if(typeof window !== 'undefined'){
     const bgBlur = document.querySelector('#bg-blur');
     window.addEventListener('scroll', () =>{
-      const scrollY = window.scrollY;
-      if(scrollY === 0){
-        bgBlur.style.display = 'none';
-      } else{
-        bgBlur.style.display = 'block';
+      let scrollY = window.scrollY;
+      const bodyHeight = window.outerHeight;
+      if(scrollY / bodyHeight > 1){
+        displayRatio = 1;
+      }else{
+        displayRatio = scrollY / bodyHeight;
       }
     });
   }
 </script>
 
-<div class="bg-blur" id="bg-blur"></div>
+<div class="bg-blur" id="bg-blur" style="--blur-ratio: blur({blurRatio});"></div>
 <div class="bg" style="--bg-img-url: url({data.data.urls.full})"></div>
 
 <style lang="scss">
@@ -27,10 +31,9 @@
   }
 
   .bg-blur{
-    display: none;
     z-index: -9;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: var(--blur-ratio);
+    -webkit-backdrop-filter: var(--blur-ratio);
   }
 
   .bg{
