@@ -1,3 +1,7 @@
+<script>
+  const year = new Date().getFullYear();
+</script>
+
 <header>
   <div class="header-inner">
     <div class="header-logo">PocoPota.com</div>
@@ -8,7 +12,9 @@
   <slot/>
 </main>
 
-<footer></footer>
+<footer>
+  <div>©{year} PocoPota</div>
+</footer>
 
 <style lang="scss">
   // reset css
@@ -40,6 +46,19 @@
         font-weight: 600;
         font-size: 20px;
       }
+    }
+  }
+
+  // footer
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    div{
+      color: white;
+      font-size: 14px;
     }
   }
 </style>

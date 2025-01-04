@@ -271,6 +271,7 @@
 
   // columns
   .columns{
+    margin-bottom: 80px;
     .banners{
       display: flex;
       justify-content: center;
