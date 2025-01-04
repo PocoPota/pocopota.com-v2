@@ -190,7 +190,7 @@
   .top{
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 130px;
     gap: 50px;
     .icon{
       img{

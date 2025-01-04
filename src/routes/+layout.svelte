@@ -32,7 +32,6 @@
   header{
     width: 100%;
     height: 60px;
-    border-bottom: solid 1px black;
     .header-inner{
       display: flex;
       justify-content: center;
