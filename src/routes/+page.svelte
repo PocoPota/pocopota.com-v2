@@ -158,6 +158,7 @@
       </a>
     </div>
   </div>
+  <div class="bg-img-details"><a href="{data.data.links.html}" target="_blank">Photo</a> by <a href="{data.data.user.links.html}" target="_blank">{data.data.user.name}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></div>
 </section>
 
 <Background {data}/>
@@ -281,6 +282,11 @@
           }
         }
       }
+    }
+    .bg-img-details{
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
     }
   }
 </style>
