@@ -1,7 +1,7 @@
 <script>
   export let data;
 
-  let displayRatio = 0;
+  let displayRatio = 0.05;
   $: blurRatio = `${displayRatio * 12}px`;
 
   if(typeof window !== 'undefined'){
@@ -9,7 +9,9 @@
     window.addEventListener('scroll', () =>{
       let scrollY = window.scrollY;
       const bodyHeight = window.outerHeight;
-      if(scrollY / bodyHeight > 1){
+      if(scrollY / bodyHeight < 0.05){
+        displayRatio = 0.05;
+      }else if(scrollY / bodyHeight > 1){
         displayRatio = 1;
       }else{
         displayRatio = scrollY / bodyHeight;
