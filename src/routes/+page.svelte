@@ -1,4 +1,6 @@
 <script>
+  import Works from "../modules/works.svelte";
+  import Articles from "../modules/articles.svelte";
   import Background from "../modules/background.svelte";
   export let data;
 </script>
@@ -55,82 +57,12 @@
 
 <section class="works">
   <div class="sec-title">Works</div>
-  <ul>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>作品名</div>
-        <div>簡単な作品説明をここに記入</div>
-      </div>
-    </li>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>作品名</div>
-        <div>簡単な作品説明をここに記入</div>
-      </div>
-    </li>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>作品名</div>
-        <div>簡単な作品説明をここに記入</div>
-      </div>
-    </li>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>作品名</div>
-        <div>簡単な作品説明をここに記入</div>
-      </div>
-    </li>
-  </ul>
+  <Works/>
 </section>
 
 <section class="articles">
   <div class="sec-title">Articles</div>
-  <ul>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>記事タイトル</div>
-        <div>
-          <span>zenn.dev</span>
-          <span>2025/01/04</span>
-        </div>
-      </div>
-    </li>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>記事タイトル</div>
-        <div>
-          <span>zenn.dev</span>
-          <span>2025/01/04</span>
-        </div>
-      </div>
-    </li>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>記事タイトル</div>
-        <div>
-          <span>zenn.dev</span>
-          <span>2025/01/04</span>
-        </div>
-      </div>
-    </li>
-    <li>
-      <img src="/ex-thumb.png" alt="サムネイル">
-      <div>
-        <div>記事タイトル</div>
-        <div>
-          <span>zenn.dev</span>
-          <span>2025/01/04</span>
-        </div>
-      </div>
-    </li>
-  </ul>
+  <Articles/>
 </section>
 
 <section class="skills">
@@ -228,42 +160,6 @@
             margin: 0;
             padding: 0;
           }
-        }
-      }
-    }
-  }
-
-  // works
-  .works{
-    ul{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 25px;
-      list-style: none;
-      padding: 0;
-      li{
-        width: 300px;
-        img{
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  // articles
-  .articles{
-    ul{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 25px;
-      list-style: none;
-      padding: 0;
-      li{
-        width: 300px;
-        img{
-          width: 100%;
         }
       }
     }
