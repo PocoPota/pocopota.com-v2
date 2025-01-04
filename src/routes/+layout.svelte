@@ -1,6 +1,6 @@
 <header>
   <div class="header-inner">
-    <div class="header-logo">PocoPota.dev</div>
+    <div class="header-logo">PocoPota.com</div>
   </div>
 </header>
 
@@ -16,6 +16,12 @@
     margin: 0;
   }
 
+  // base
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+JP&family=Roboto&display=swap');
+  *{
+    font-family: "Roboto", "Noto Sans JP", serif;
+  }
+
   // header
   header{
     width: 100%;
@@ -29,7 +35,11 @@
       height: 100%;
       margin: 0 auto;
       color: white;
-      font-size: 16px;
+      .header-logo{
+        font-family: "IBM Plex Mono", serif;
+        font-weight: 600;
+        font-size: 20px;
+      }
     }
   }
 </style>
