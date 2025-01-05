@@ -16,7 +16,6 @@
       <div>
         <ul>
           <li>筑波大学情報学群情報科学類 (25B)</li>
-          <li>WORD編集部</li>
         </ul>
       </div>
     </div>
@@ -86,7 +85,7 @@
     </div>
     <div>
       <a href="https://love.tsukuba-ac.net/" target="_blank">
-        <img src="/tsukuba-love2.png" alt="時間ねぇー">
+        <img src="/tsukuba-love2.png" alt="つくばに済んでいます。つくばのほうが、楽しいので。">
       </a>
     </div>
   </div>
