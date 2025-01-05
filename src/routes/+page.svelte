@@ -62,7 +62,7 @@
 
 <section class="articles">
   <div class="sec-title">Articles</div>
-  <Articles/>
+  <Articles works_data={data.works_data}/>
 </section>
 
 <section class="skills">
@@ -90,10 +90,10 @@
       </a>
     </div>
   </div>
-  <div class="bg-img-details"><a href="{data.data.links.html}" target="_blank">Photo</a> by <a href="{data.data.user.links.html}" target="_blank">{data.data.user.name}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></div>
+  <div class="bg-img-details"><a href="{data.img_data.links.html}" target="_blank">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></div>
 </section>
 
-<Background {data}/>
+<Background img_data={data.img_data}/>
 
 <style lang="scss">
   *{

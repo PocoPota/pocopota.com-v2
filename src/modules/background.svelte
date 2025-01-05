@@ -1,5 +1,5 @@
 <script>
-  export let data;
+  export let img_data;
 
   let displayRatio = 0.05;
   $: blurRatio = `${displayRatio * 12}px`;
@@ -21,7 +21,7 @@
 </script>
 
 <div class="bg-blur" id="bg-blur" style="--blur-ratio: blur({blurRatio});"></div>
-<div class="bg" style="--bg-img-url: url({data.data.urls.full})"></div>
+<div class="bg" style="--bg-img-url: url({img_data.urls.full})"></div>
 
 <style lang="scss">
   .bg-blur, .bg{

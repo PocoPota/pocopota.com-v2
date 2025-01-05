@@ -1,3 +1,7 @@
+<script>
+  export let works_data;
+</script>
+
 <ul>
   <li>
     <img src="/ex-thumb.png" alt="サムネイル">
