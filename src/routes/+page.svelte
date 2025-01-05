@@ -1,7 +1,7 @@
 <script>
-  import Works from "../modules/works.svelte";
-  import Articles from "../modules/articles.svelte";
-  import Background from "../modules/background.svelte";
+  import Works from "./works.svelte";
+  import Articles from "./articles.svelte";
+  import Background from "$lib/background.svelte";
   export let data;
 </script>
 
