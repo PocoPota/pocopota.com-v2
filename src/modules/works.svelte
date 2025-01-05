@@ -1,36 +1,18 @@
 <script>
   export let works_data;
+  console.log(works_data);
 </script>
 
 <ul>
+  {#each works_data.items as item}
   <li>
     <img src="/ex-thumb.png" alt="サムネイル">
     <div>
-      <div>作品名</div>
+      <div>{item.fields.name}</div>
       <div>簡単な作品説明をここに記入</div>
     </div>
   </li>
-  <li>
-    <img src="/ex-thumb.png" alt="サムネイル">
-    <div>
-      <div>作品名</div>
-      <div>簡単な作品説明をここに記入</div>
-    </div>
-  </li>
-  <li>
-    <img src="/ex-thumb.png" alt="サムネイル">
-    <div>
-      <div>作品名</div>
-      <div>簡単な作品説明をここに記入</div>
-    </div>
-  </li>
-  <li>
-    <img src="/ex-thumb.png" alt="サムネイル">
-    <div>
-      <div>作品名</div>
-      <div>簡単な作品説明をここに記入</div>
-    </div>
-  </li>
+  {/each}
 </ul>
 
 <style lang="scss">

@@ -57,12 +57,12 @@
 
 <section class="works">
   <div class="sec-title">Works</div>
-  <Works/>
+  <Works works_data={data.works_data}/>
 </section>
 
 <section class="articles">
   <div class="sec-title">Articles</div>
-  <Articles works_data={data.works_data}/>
+  <Articles/>
 </section>
 
 <section class="skills">
