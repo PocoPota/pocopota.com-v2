@@ -1,6 +1,7 @@
 <script>
   import Works from "./works.svelte";
   import Articles from "./articles.svelte";
+  import CertAw from "./cert-aw.svelte";
   import Background from "$lib/background.svelte";
   export let data;
 </script>
@@ -70,6 +71,7 @@
 
 <section class="certificates-awards">
   <div class="sec-title">Certificates / Awards</div>
+  <CertAw/>
 </section>
 
 <section class="links">
