@@ -21,27 +21,35 @@
       <div>つくば / 山口</div>
     </div>
   </div>
-  <div class="top-links">
+  <div class="links">
     <ul>
-      <li>
-        <div>Twitter (X)</div>
-        <div>@PocoPota_io</div>
-        <div></div>
+      <li class="twitter">
+        <div class="link-icon"><img src="/links/twitter-x.svg" alt="Twitter (X)のアイコン"></div>
+        <div class="link-details">
+          <div>Twitter (X)</div>
+          <div>@PocoPota_io</div>
+        </div>
       </li>
-      <li>
-        <div>GitHub</div>
-        <div>PocoPota</div>
-        <div></div>
+      <li class="github">
+        <div class="link-icon"><img src="/links/github.svg" alt="GitHubのアイコン"></div>
+        <div class="link-details">
+          <div>GitHub</div>
+          <div>PocoPota</div>
+        </div>
       </li>
-      <li>
-        <div>Zenn</div>
-        <div>@pocopota</div>
-        <div></div>
+      <li class="zenn">
+        <div class="link-icon"><img src="/links/zenn.svg" alt="Zennのアイコン"></div>
+        <div class="link-details">
+          <div>Zenn</div>
+          <div>@pocopota</div>
+        </div>
       </li>
-      <li>
-        <div>Discord</div>
-        <div>pocopota</div>
-        <div></div>
+      <li class="discord">
+        <div class="link-icon"><img src="/links/discord.svg" alt="Discordのアイコン"></div>
+        <div class="link-details">
+          <div>Discord</div>
+          <div>pocopota</div>
+        </div>
       </li>
     </ul>
   </div>
@@ -90,6 +98,66 @@
             list-style: none;
             margin: 0;
             padding: 0;
+          }
+        }
+      }
+    }
+    .links{
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li{
+          display: flex;
+          align-items: center;
+          padding: 5.5px 15px;
+          border-radius: 4px;
+          gap: 12px;
+          .link-icon{
+            display: flex;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            overflow: visible;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          .link-details{
+            display: flex;
+            flex-direction: column;
+            div{
+              &:nth-child(1){
+                font-size: 11px;
+                color: #cfcfcf;
+              }
+              &:nth-child(2){
+                font-size: 15px;
+                font-weight: 800;
+              }
+            }
+          }
+          &.twitter{
+            background: #000000;
+            gap: 15px;
+            .link-icon{
+              width: 22px;
+              height: 22px;
+            }
+          }
+          &.github{
+            background: #171515;
+          }
+          &.zenn{
+            background: #3ea8ff;
+          }
+          &.discord{
+            background: #5865f2;
           }
         }
       }
