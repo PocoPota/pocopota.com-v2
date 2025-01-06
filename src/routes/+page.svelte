@@ -31,17 +31,20 @@
 <section class="columns">
   <div class="banners">
     <div>
-      <a href="https://sites.google.com/view/happy-busy/" target="_blank">
+      <a href="https://sites.google.com/view/happy-busy/" target="_blank" rel="noopener noreferrer">
         <img src="/no-time.png" alt="時間ねぇー">
       </a>
     </div>
     <div>
-      <a href="https://love.tsukuba-ac.net/" target="_blank">
-        <img src="/tsukuba-love2.png" alt="つくばに済んでいます。つくばのほうが、楽しいので。">
+      <a href="https://love.tsukuba-ac.net/" target="_blank" rel="noopener noreferrer">
+        <img src="/tsukuba-love2.png" alt="つくばに住んでいます。つくばのほうが、楽しいので。">
       </a>
     </div>
   </div>
-  <div class="bg-img-details"><a href="{data.img_data.links.html}" target="_blank">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></div>
+  <div class="bg-img-details">
+    <div>背景画像はランダムに選択されています</div>
+    <div><a href="{data.img_data.links.html}" target="_blank" rel="noopener noreferrer">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank" rel="noopener noreferrer">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
+  </div>
 </section>
 
 <Background img_data={data.img_data}/>

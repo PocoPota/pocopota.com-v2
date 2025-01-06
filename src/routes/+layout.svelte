@@ -26,7 +26,9 @@
 
 <header class="{headerShadow ? 'header-scroll' : ''}" style="--blur-ratio: blur({blurRatio});">
   <div class="header-inner">
-    <div class="header-logo">PocoPota.com</div>
+    <div class="header-logo">
+      <a href="/">PocoPota.com</a>
+    </div>
   </div>
 </header>
 
@@ -46,10 +48,14 @@
 
   :global(img) {
     vertical-align: top;
-}
+  }
+
+  :global(html){
+    scroll-behavior: smooth;
+  }
 
   // base
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+JP&family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;600&family=Roboto:wght@400;600&display=swap');
   *{
     font-family: "Roboto", "Noto Sans JP", serif;
   }
@@ -77,6 +83,10 @@
         font-family: "IBM Plex Mono", serif;
         font-weight: 600;
         font-size: 20px;
+        a{
+          color: white;
+          text-decoration: none;
+        }
       }
     }
   }
