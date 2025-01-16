@@ -1,5 +1,6 @@
 <script>
   export let img_data;
+  let unsplashError = data.img_data.error || false;
 
   let displayRatio = 0.05;
   $: blurRatio = `${displayRatio * 12}px`;
@@ -21,7 +22,10 @@
 </script>
 
 <div class="bg-blur" id="bg-blur" style="--blur-ratio: blur({blurRatio});"></div>
-<div class="bg" style="--bg-img-url: url({img_data.urls.full})"></div>
+
+{#if !unsplashError}
+  <div class="bg" style="--bg-img-url: url({img_data.urls.full})"></div>
+{/if}
 
 <style lang="scss">
   .bg-blur, .bg{
