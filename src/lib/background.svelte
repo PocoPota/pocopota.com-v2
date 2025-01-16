@@ -1,6 +1,6 @@
 <script>
   export let img_data;
-  let unsplashError = data.img_data.error || false;
+  let unsplashError = img_data.error || false;
 
   let displayRatio = 0.05;
   $: blurRatio = `${displayRatio * 12}px`;
