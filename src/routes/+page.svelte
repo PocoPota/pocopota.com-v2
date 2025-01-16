@@ -5,14 +5,20 @@
   import CertAw from "./cert-aw.svelte";
   import Background from "$lib/background.svelte";
   export let data;
+
+  // fetchエラーチェック
+  let unsplashError = data.img_data.error || false;
+  let contentfulError = data.works_data.error || false;
 </script>
 
 <Top/>
 
-<section class="works">
-  <div class="sec-title">Works</div>
-  <Works works_data={data.works_data}/>
-</section>
+{#if !contentfulError}
+  <section class="works">
+    <div class="sec-title">Works</div>
+    <Works works_data={data.works_data}/>
+  </section>
+{/if}
 
 <section class="articles">
   <div class="sec-title">Articles</div>
@@ -42,8 +48,10 @@
     </div>
   </div>
   <div class="bg-img-details">
-    <div>背景画像はランダムに選択されています</div>
-    <div><a href="{data.img_data.links.html}" target="_blank" rel="noopener noreferrer">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank" rel="noopener noreferrer">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
+    {#if !unsplashError}
+      <div>背景画像はランダムに選択されています</div>
+      <div><a href="{data.img_data.links.html}" target="_blank" rel="noopener noreferrer">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank" rel="noopener noreferrer">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
+    {/if}
   </div>
 </section>
 
