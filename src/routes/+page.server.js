@@ -1,9 +1,10 @@
-import { VITE_UNSPLASH_ACCESS_KEY, VITE_UNSPLASH_API_URL, VITE_CONTENTFUL_ACCESS_TOKEN, VITE_CONTENTFUL_API_URL, VITE_CONTENTFUL_ENV_ID, VITE_CONTENTFUL_SPACE_ID } from "$env/static/private";
+import { VITE_UNSPLASH_ACCESS_KEY, VITE_UNSPLASH_API_URL, VITE_CONTENTFUL_ACCESS_TOKEN, VITE_CONTENTFUL_API_URL, VITE_CONTENTFUL_ENV_ID, VITE_CONTENTFUL_SPACE_ID, VITE_ZENN_RSS_URL } from "$env/static/private";
 
 export async function load({ fetch }) {
 
   let img_data = {};
   let works_data = {};
+  let rss_data = {};
 
   // UNSPLASH
   try{
@@ -29,7 +30,32 @@ export async function load({ fetch }) {
     works_data = {'error': true, 'message': e.message};
   }
 
+  // RSS
+  try{
+    // Zenn
+    const zenn_request_url = VITE_ZENN_RSS_URL;
+    const zenn_response = await fetch(zenn_request_url);
+    // Hatena
+    const hatena_request_url = VITE_HATENA_RSS_URL;
+    const hatena_response = await fetch(hatena_request_url);
+    // Blog
+    const blog_request_url = VITE_BLOG_RSS_URL;
+    const blog_response = await fetch(blog_request_url);
+    // Check response
+    if(!zenn_response.ok || !hatena_response.ok || !blog_response.ok){
+      throw new Error(`Failed to fetch: ${zenn_response.status} ${hatena_response.status} ${blog_response.status}`);
+    }
+    rss_data = {
+      zenn: await zenn_response.text(),
+      hatena: await hatena_response.text(),
+      blog: await blog_response.text()
+    };
+  }
+  catch(e){
+    rss_data = {'error': true, 'message': e.message};
+  }
+
   return {
-    img_data, works_data
+    img_data, works_data, rss_data
   };
 }

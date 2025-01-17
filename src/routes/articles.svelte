@@ -1,34 +1,8 @@
+<script>
+  export let rss_data;
+</script>
+
 <ul>
-  <li>
-    <img src="/ex-thumb.png" alt="サムネイル">
-    <div>
-      <div>記事タイトル</div>
-      <div>
-        <span>zenn.dev</span>
-        <span>2025/01/04</span>
-      </div>
-    </div>
-  </li>
-  <li>
-    <img src="/ex-thumb.png" alt="サムネイル">
-    <div>
-      <div>記事タイトル</div>
-      <div>
-        <span>zenn.dev</span>
-        <span>2025/01/04</span>
-      </div>
-    </div>
-  </li>
-  <li>
-    <img src="/ex-thumb.png" alt="サムネイル">
-    <div>
-      <div>記事タイトル</div>
-      <div>
-        <span>zenn.dev</span>
-        <span>2025/01/04</span>
-      </div>
-    </div>
-  </li>
   <li>
     <img src="/ex-thumb.png" alt="サムネイル">
     <div>

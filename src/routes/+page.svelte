@@ -9,6 +9,7 @@
   // fetchエラーチェック
   let unsplashError = data.img_data.error || false;
   let contentfulError = data.works_data.error || false;
+  let rssError = data.rss_data.error || false;
 </script>
 
 <Top/>
@@ -20,10 +21,12 @@
   </section>
 {/if}
 
-<section class="articles">
-  <div class="sec-title">Articles</div>
-  <Articles/>
-</section>
+{#if !rssError}
+  <section class="articles">
+    <div class="sec-title">Articles</div>
+    <Articles rss_data={data.rss_data}/>
+  </section>
+{/if}
 
 <section class="certificates-awards">
   <div class="sec-title">Certificates / Awards</div>
