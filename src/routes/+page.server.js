@@ -1,4 +1,5 @@
-import { VITE_UNSPLASH_ACCESS_KEY, VITE_UNSPLASH_API_URL, VITE_CONTENTFUL_ACCESS_TOKEN, VITE_CONTENTFUL_API_URL, VITE_CONTENTFUL_ENV_ID, VITE_CONTENTFUL_SPACE_ID, VITE_ZENN_RSS_URL } from "$env/static/private";
+import { VITE_UNSPLASH_ACCESS_KEY, VITE_UNSPLASH_API_URL, VITE_CONTENTFUL_ACCESS_TOKEN, VITE_CONTENTFUL_API_URL, VITE_CONTENTFUL_ENV_ID, VITE_CONTENTFUL_SPACE_ID, VITE_ZENN_RSS_URL, VITE_HATENA_RSS_URL, VITE_BLOG_RSS_URL } from "$env/static/private";
+import xml2js from 'xml2js';
 
 export async function load({ fetch }) {
 
@@ -50,6 +51,17 @@ export async function load({ fetch }) {
       hatena: await hatena_response.text(),
       blog: await blog_response.text()
     };
+  }
+  catch(e){
+    rss_data = {'error': true, 'message': e.message};
+  }
+
+  // RSS xml to json
+  try{
+    const parser = new xml2js.Parser({ explicitArray: false, trim: true });
+    rss_data.zenn = await parser.parseStringPromise(rss_data.zenn);
+    rss_data.hatena = await parser.parseStringPromise(rss_data.hatena);
+    rss_data.blog = await parser.parseStringPromise(rss_data.blog);
   }
   catch(e){
     rss_data = {'error': true, 'message': e.message};
