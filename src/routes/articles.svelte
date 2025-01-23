@@ -30,8 +30,7 @@
 <ul>
   {#each articles as item}
     <li>
-      <!-- <img src={item.enclosure.urlencoded.url} alt="サムネイル"> -->
-      <img src="/ex-thumb.png" alt="サムネイル">
+      <img src={item.enclosure['$'].url} alt="サムネイル">
       <div>
         <div>{item.title}</div>
         <div>
