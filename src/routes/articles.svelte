@@ -1,6 +1,4 @@
 <script>
-  import { urlencoded } from "express";
-
   export let rss_data;
 
   // 記事データの取得
