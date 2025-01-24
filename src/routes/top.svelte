@@ -64,8 +64,8 @@
 </section>
 
 <style lang="scss">
-    // top
-    .top{
+  // top
+  .top{
     display: flex;
     justify-content: center;
     margin-top: 250px;
