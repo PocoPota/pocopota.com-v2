@@ -36,13 +36,13 @@
     </a>
   </li>
   <li class="discord">
-    <a href="https://discord.com/users/677877265694195713" target="_blank" rel="noopener noreferrer">
+    <div class="a">
       <div class="link-icon"><img src="/links/discord.svg" alt="Discordのアイコン"></div>
       <div class="link-details">
         <div>Discord</div>
         <div>pocopota</div>
       </div>
-    </a>
+    </div>
   </li>
   <li class="blog">
     <a href="https://blog.pocopota.com" target="_blank" rel="noopener noreferrer">
@@ -84,6 +84,7 @@
     gap: 8px;
     li{
       width: 250px;
+      display: flex;
       border-radius: 4px;
       .a, a{
         display: flex;
@@ -92,6 +93,7 @@
         gap: 12px;
         color: white;
         text-decoration: none;
+        width: 100%;
         &:hover{
           opacity: 0.7;
         }
