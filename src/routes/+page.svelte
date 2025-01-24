@@ -3,6 +3,7 @@
   import Works from "./works.svelte";
   import Articles from "./articles.svelte";
   import CertAw from "./cert-aw.svelte";
+  import Links from "./links.svelte";
   import Background from "$lib/background.svelte";
   export let data;
 
@@ -35,6 +36,7 @@
 
 <section class="links">
   <div class="sec-title">Links</div>
+  <Links/>
 </section>
 
 <section class="columns">
