@@ -25,6 +25,8 @@
   }
 </script>
 
+<h1>Articles</h1>
+
 <ul>
   {#each articles as item}
     <li>
@@ -51,7 +53,25 @@
 <Background img_data={data.img_data}/>
 
 <style lang="scss">
+  *{
+    color: white;
+  }
+  h1{
+    margin-top: 200px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    font-family: "IBM Plex Mono", serif;
+    &::before{
+      content: '{ ';
+    }
+    &::after{
+      content: ' }';
+    }
+  }
   ul{
+    width: 950px;
+    margin: 150px auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
