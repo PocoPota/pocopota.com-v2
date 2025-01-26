@@ -33,7 +33,7 @@
           {#if item.enclosure}
             <img src={item.enclosure['$'].url} alt="サムネイル">
           {:else}
-            <div>無理だぜ！！！！！！！！！！！！</div>
+            <img src="/ex-thumb.png" alt="サムネイル">
           {/if}
         </div>
         <div class="content">
