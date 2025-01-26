@@ -2,6 +2,9 @@ import { VITE_BLOG_RSS_URL, VITE_HATENA_RSS_URL, VITE_ZENN_RSS_URL } from "$env/
 import xml2js from 'xml2js';
 
 export async function load({ fetch }) {
+
+  let rss_data = {};
+
   // RSS
   try{
     // Zenn
@@ -17,7 +20,7 @@ export async function load({ fetch }) {
     if(!zenn_response.ok || !hatena_response.ok || !blog_response.ok){
       throw new Error(`Failed to fetch: ${zenn_response.status} ${hatena_response.status} ${blog_response.status}`);
     }
-    let rss_data = {
+    rss_data = {
       zenn: await zenn_response.text(),
       hatena: await hatena_response.text(),
       blog: await blog_response.text()
