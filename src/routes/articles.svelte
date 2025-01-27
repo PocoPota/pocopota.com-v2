@@ -32,7 +32,11 @@
     <li>
       <a href="{item.link}" target="_blank" rel="noopener noreferrer">
         <div class="thumbnail">
-          <img src={item.enclosure['$'].url} alt="サムネイル">
+          {#if item.enclosure}
+            <img src={item.enclosure['$'].url} alt="サムネイル">
+          {:else}
+            <img src="/ex-thumb.png" alt="サムネイル">
+          {/if}
         </div>
         <div class="content">
           <div>{item.title}</div>
