@@ -1,4 +1,9 @@
 <script>
+  import Background from "$lib/background.svelte";
+  export let data;
+
+  let unsplashError = data.img_data.error || false;
+
   const year = new Date().getFullYear();
 
   // headerのぼかし度計算
@@ -37,8 +42,16 @@
 </main>
 
 <footer>
-  <div>©{year} PocoPota</div>
+  <div class="bg-img-details">
+    {#if !unsplashError}
+      <div>背景画像はランダムに選択されています</div>
+      <div><a href="{data.img_data.links.html}" target="_blank" rel="noopener noreferrer">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank" rel="noopener noreferrer">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
+    {/if}
+  </div>
+  <div class="copyright">©{year} PocoPota</div>
 </footer>
+
+<Background img_data={data.img_data}/>
 
 <style lang="scss">
   // reset css
@@ -96,9 +109,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 70px;
-    div{
+    padding: 20px 0;
+    .bg-img-details{
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: white;
+      a{
+        color: white;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    .copyright{
       color: white;
       font-size: 14px;
     }

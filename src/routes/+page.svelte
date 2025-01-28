@@ -4,11 +4,9 @@
   import Articles from "./modules/articles.svelte";
   import CertAw from "./modules/cert-aw.svelte";
   import Links from "./modules/links.svelte";
-  import Background from "$lib/background.svelte";
   export let data;
 
   // fetchエラーチェック
-  let unsplashError = data.img_data.error || false;
   let contentfulError = data.works_data.error || false;
   let rssError = data.rss_data.error || false;
 </script>
@@ -52,15 +50,7 @@
       </a>
     </div>
   </div>
-  <div class="bg-img-details">
-    {#if !unsplashError}
-      <div>背景画像はランダムに選択されています</div>
-      <div><a href="{data.img_data.links.html}" target="_blank" rel="noopener noreferrer">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank" rel="noopener noreferrer">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
-    {/if}
-  </div>
 </section>
-
-<Background img_data={data.img_data}/>
 
 <style lang="scss">
   *{
@@ -99,11 +89,6 @@
           }
         }
       }
-    }
-    .bg-img-details{
-      text-align: center;
-      margin-top: 15px;
-      font-size: 14px;
     }
   }
 </style>

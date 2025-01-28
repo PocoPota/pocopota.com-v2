@@ -1,5 +1,4 @@
 <script>
-  import Background from '$lib/background.svelte';
   export let data;
 
   // 記事データの取得
@@ -49,8 +48,6 @@
     </li>
   {/each}
 </ul>
-
-<Background img_data={data.img_data}/>
 
 <style lang="scss">
   *{

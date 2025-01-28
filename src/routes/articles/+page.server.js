@@ -1,22 +1,9 @@
-import { VITE_BLOG_RSS_URL, VITE_HATENA_RSS_URL, VITE_UNSPLASH_ACCESS_KEY, VITE_UNSPLASH_API_URL, VITE_ZENN_RSS_URL } from "$env/static/private";
+import { VITE_BLOG_RSS_URL, VITE_HATENA_RSS_URL, VITE_ZENN_RSS_URL } from "$env/static/private";
 import xml2js from 'xml2js';
 
 export async function load({ fetch }) {
 
-  let img_data = {};
   let rss_data = {};
-
-  // UNSPLASH
-  try{
-    const img_request_url = `${VITE_UNSPLASH_API_URL}/photos/random?client_id=${VITE_UNSPLASH_ACCESS_KEY}&orientation=landscape`;
-    const img_response = await fetch(img_request_url);
-    if (!img_response.ok) {
-      throw new Error(`Failed to fetch: ${img_response.status}`);
-    }
-    img_data = await img_response.json();
-  }catch(e){
-    img_data = {'error': true, 'message': e.message};
-  }
 
   // RSS
   try{
@@ -45,7 +32,7 @@ export async function load({ fetch }) {
     rss_data.blog = await parser.parseStringPromise(rss_data.blog);
 
     return {
-      img_data, rss_data
+      rss_data
     };
   }
   catch(e){
