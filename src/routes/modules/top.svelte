@@ -8,13 +8,13 @@
       <div>所属</div>
       <div>
         <ul>
-          <li>筑波大学情報学群情報科学類 (25B)</li>
+          <li>筑波大学 情報学群 情報科学類 (25B)</li>
         </ul>
       </div>
     </div>
     <div class="title-content">
       <div>技術</div>
-      <div>Web周辺 (特にフロントエンド)</div>
+      <div>Webとその周辺 (特にフロントエンド)</div>
     </div>
     <div class="title-content">
       <div>生息地</div>
