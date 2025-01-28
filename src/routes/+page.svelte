@@ -1,9 +1,9 @@
 <script>
-  import Top from "./top.svelte";
-  import Works from "./works.svelte";
-  import Articles from "./articles.svelte";
-  import CertAw from "./cert-aw.svelte";
-  import Links from "./links.svelte";
+  import Top from "./modules/top.svelte";
+  import Works from "./modules/works.svelte";
+  import Articles from "./modules/articles.svelte";
+  import CertAw from "./modules/cert-aw.svelte";
+  import Links from "./modules/links.svelte";
   import Background from "$lib/background.svelte";
   export let data;
 
