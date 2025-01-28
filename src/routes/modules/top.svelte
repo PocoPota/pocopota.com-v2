@@ -51,13 +51,13 @@
         </a>
       </li>
       <li class="discord">
-        <a href="https://discord.com/users/677877265694195713" target="_blank" rel="noopener noreferrer">
+        <div class="a">
           <div class="link-icon"><img src="/links/discord.svg" alt="Discordのアイコン"></div>
           <div class="link-details">
             <div>Discord</div>
             <div>pocopota</div>
           </div>
-        </a>
+        </div>
       </li>
     </ul>
   </div>
@@ -120,16 +120,13 @@
         gap: 8px;
         li{
           border-radius: 4px;
-          a{
+          a, .a{
             display: flex;
             align-items: center;
             padding: 6px 15px;
             gap: 12px;
             color: white;
             text-decoration: none;
-            &:hover{
-              opacity: 0.7;
-            }
             .link-icon{
               display: flex;
               align-items: center;
@@ -156,6 +153,9 @@
                 }
               }
             }
+          }
+          a:hover{
+            opacity: 0.7;
           }
           &.twitter{
             background: #000000;
