@@ -9,27 +9,22 @@
   // headerのぼかし度計算
   let displayRatio = 0;
   $: blurRatio = `${displayRatio * 15}px`;
-  $: headerShadow = false;
 
   if(typeof window !== 'undefined'){
       const bgBlur = document.querySelector('#bg-blur');
     window.addEventListener('scroll', () =>{
       let scrollY = window.scrollY;
       const bodyHeight = window.outerHeight;
-      if(scrollY / bodyHeight === 0){
-        headerShadow = false;
-      }else if(scrollY / bodyHeight > 1){
+      if(scrollY / bodyHeight > 1){
         displayRatio = 1;
-        headerShadow = true;
       }else{
         displayRatio = scrollY / bodyHeight;
-        headerShadow = true;
       }
     });
   }
 </script>
 
-<header class="{headerShadow ? 'header-scroll' : ''}" style="--blur-ratio: blur({blurRatio});">
+<header style="--blur-ratio: blur({blurRatio});">
   <div class="header-inner">
     <div class="header-logo">
       <a href="/">PocoPota.com</a>
@@ -81,9 +76,6 @@
     top: 0;
     backdrop-filter: var(--blur-ratio);
     -webkit-backdrop-filter: var(--blur-ratio);
-    &.header-scroll{
-      box-shadow: 0 4px 12px 2px rgba(255, 255, 255, 0.144);
-    }
     .header-inner{
       display: flex;
       justify-content: center;
