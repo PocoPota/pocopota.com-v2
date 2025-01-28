@@ -5,11 +5,13 @@
 <ul>
   {#each works_data.items as item}
   <li>
-    <img src="/ex-thumb.png" alt="サムネイル">
-    <div>
-      <div>{item.fields.name}</div>
-      <div>簡単な作品説明をここに記入</div>
-    </div>
+    <a href="/works/{item.fields.id}" rel="noopener noreferrer">
+      <img src="/ex-thumb.png" alt="サムネイル">
+      <div>
+        <div>{item.fields.name}</div>
+        <div>簡単な作品説明をここに記入</div>
+      </div>
+    </a>
   </li>
   {/each}
 </ul>
@@ -24,8 +26,15 @@
     padding: 0;
     li{
       width: 300px;
-      img{
-        width: 100%;
+      &:hover{
+        filter: brightness(1.3);
+      }
+      a{
+        color: white;
+        text-decoration: none;
+        img{
+          width: 100%;
+        }
       }
     }
   }
