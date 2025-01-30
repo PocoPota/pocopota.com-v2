@@ -6,7 +6,7 @@
   {#each works_data.items as item}
   <li>
     <a href="/works/{item.fields.id}" rel="noopener noreferrer">
-      <img src="/ex-thumb.png" alt="サムネイル">
+      <img src={item.fields.thumbnail.fields.file.url} alt="サムネイル">
       <div>
         <div>{item.fields.name}</div>
         <div>簡単な作品説明をここに記入</div>
