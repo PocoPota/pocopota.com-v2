@@ -39,7 +39,7 @@
 <footer>
   <div class="bg-img-details">
     {#if !unsplashError}
-      <div>背景画像はランダムに選択されています</div>
+      <div>背景画像はビルド時にランダムに選択されています</div>
       <div><a href="{data.img_data.links.html}" target="_blank" rel="noopener noreferrer">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank" rel="noopener noreferrer">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
     {/if}
   </div>
