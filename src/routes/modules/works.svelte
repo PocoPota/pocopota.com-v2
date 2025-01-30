@@ -7,7 +7,7 @@
   <li>
     <a href="/works/{item.fields.id}" rel="noopener noreferrer">
       <img src={item.fields.thumbnail.fields.file.url} alt="サムネイル">
-      <div>
+      <div class="content">
         <div>{item.fields.name}</div>
         <div>簡単な作品説明をここに記入</div>
       </div>
@@ -34,6 +34,16 @@
         text-decoration: none;
         img{
           width: 100%;
+        }
+        .content{
+          div{
+            &:nth-child(1){
+              font-size: 1.1rem;
+            }
+            &:nth-child(2){
+              font-size: 0.9rem;
+            }
+          }
         }
       }
     }
