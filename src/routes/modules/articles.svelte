@@ -41,7 +41,7 @@
         <div class="content">
           <div>{item.title}</div>
           <div>
-            <span>{item.source}</span>
+            <span>{new URL(item.link).hostname}</span>
             <span>{formatDate(item.pubDate)}</span>
           </div>
         </div>
@@ -85,6 +85,10 @@
           margin-bottom: 2px;
           font-size: 16px;
           line-height: 1.1em;
+          &:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+          }
         }
         span{
           font-size: 13px;
