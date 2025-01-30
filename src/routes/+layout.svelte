@@ -76,6 +76,7 @@
     top: 0;
     backdrop-filter: var(--blur-ratio);
     -webkit-backdrop-filter: var(--blur-ratio);
+    z-index: 1000;
     .header-inner{
       display: flex;
       justify-content: center;
@@ -94,6 +95,11 @@
         }
       }
     }
+  }
+
+  // main
+  main{
+    margin-top: 60px;
   }
 
   // footer
