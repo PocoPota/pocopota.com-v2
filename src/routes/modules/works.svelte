@@ -5,7 +5,7 @@
 <ul>
   {#each works_data.items as item}
   <li>
-    <a href="/works/{item.sys.id}" rel="noopener noreferrer">
+    <a href="/works/{item.fields.id}" rel="noopener noreferrer">
       <img src={item.fields.thumbnail.fields.file.url} alt="サムネイル">
       <div class="content">
         <div>{item.fields.name}</div>

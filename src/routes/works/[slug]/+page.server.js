@@ -3,8 +3,25 @@ import { VITE_CONTENTFUL_ACCESS_TOKEN, VITE_CONTENTFUL_API_URL, VITE_CONTENTFUL_
 export async function load({ fetch, params }) {
   const { slug } = params;
 
+  // システムIDとアイテムIDを紐づけを作成
+  let works_data = {};
+  const works_request_url = `${VITE_CONTENTFUL_API_URL}/spaces/${VITE_CONTENTFUL_SPACE_ID}/environments/${VITE_CONTENTFUL_ENV_ID}/entries?access_token=${VITE_CONTENTFUL_ACCESS_TOKEN}`;
+  const works_response = await fetch(works_request_url);
+  if (!works_response.ok) {
+    throw new Error(`Failed to fetch: ${works_response.status}`);
+  }
+  works_data = await works_response.json();
+
+  let ids_list = {};
+  works_data.items.forEach((item) => {
+    ids_list[item.fields.id] = item.sys.id;
+  });
+
+  // slugの変換
+  const system_id = ids_list[slug];
+
   // 作品データ取得
-  const item_request_url = `${VITE_CONTENTFUL_API_URL}/spaces/${VITE_CONTENTFUL_SPACE_ID}/environments/${VITE_CONTENTFUL_ENV_ID}/entries/${slug}?access_token=${VITE_CONTENTFUL_ACCESS_TOKEN}`;
+  const item_request_url = `${VITE_CONTENTFUL_API_URL}/spaces/${VITE_CONTENTFUL_SPACE_ID}/environments/${VITE_CONTENTFUL_ENV_ID}/entries/${system_id}?access_token=${VITE_CONTENTFUL_ACCESS_TOKEN}`;
   const item_response = await fetch(item_request_url);
   if (!item_response.ok) {
     throw new Error(`Failed to fetch: ${item_response.status}`);
