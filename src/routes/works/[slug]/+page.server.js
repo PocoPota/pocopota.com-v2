@@ -20,5 +20,9 @@ export async function load({ fetch, params }) {
   }
   item_data.fields.thumbnail = await thumbnail_response.json();
 
+  // コメントの改行処理
+  let comments = item_data.fields.comments;
+  item_data.fields.comments = comments.split("\n");
+
   return {item_data};
 }
