@@ -41,5 +41,11 @@ export async function load({ fetch, params }) {
   let comments = item_data.fields.comments;
   item_data.fields.comments = comments.split("\n");
 
+  // 日付のフォーマット
+  let date = item_data.fields.date;
+  date = new Date(date);
+  date = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}`;
+  item_data.fields.date = date;
+
   return {item_data};
 }
