@@ -99,6 +99,8 @@
 
   // main
   main{
+    width: 950px;
+    margin: 0 auto;
     margin-top: 60px;
   }
 
