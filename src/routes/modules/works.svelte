@@ -9,7 +9,7 @@
       <img src={item.fields.thumbnail.fields.file.url} alt="サムネイル">
       <div class="content">
         <div>{item.fields.name}</div>
-        <div>簡単な作品説明をここに記入</div>
+        <div>{item.fields.short}</div>
       </div>
     </a>
   </li>
