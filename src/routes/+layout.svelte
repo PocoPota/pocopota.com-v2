@@ -129,4 +129,26 @@
       font-size: 14px;
     }
   }
+
+  // article
+  :global(article){
+    width: 800px;
+    margin: 100px auto;
+    color: white;
+    padding: 50px;
+    position: relative;
+    &::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      box-shadow: 0px 0px 29px -6px #777777;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+    }
+  }
 </style>
