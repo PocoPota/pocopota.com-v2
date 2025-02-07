@@ -151,4 +151,10 @@
       border-radius: 20px;
     }
   }
+  :global(article h1){
+    font-size: 30px;
+  }
+  :global(article a){
+    color: rgb(186, 186, 255);
+  }
 </style>
