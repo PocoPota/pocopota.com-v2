@@ -1,14 +1,13 @@
 <script>
-  export let works_data;
+  export let data;
+  let works_data = data.works_data;
 
-  // 時系列に並べる
   works_data.items.sort((a, b) => {
     return new Date(b.fields.date) - new Date(a.fields.date);
   });
-
-  // 記事を9件に絞る
-  works_data.items = works_data.items.slice(0, 9);
 </script>
+
+<h1>Works</h1>
 
 <ul>
   {#each works_data.items as item}
@@ -24,10 +23,26 @@
   {/each}
 </ul>
 
-<div class="more-read"><a href="/works">もっと見る</a></div>
-
 <style lang="scss">
+  *{
+    color: white;
+  }
+  h1{
+    margin-top: 200px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    font-family: "IBM Plex Mono", serif;
+    &::before{
+      content: '{ ';
+    }
+    &::after{
+      content: ' }';
+    }
+  }
   ul{
+    width: 950px;
+    margin: 150px auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -55,18 +70,6 @@
             }
           }
         }
-      }
-    }
-  }
-  .more-read{
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    a{
-      color: white;
-      text-decoration: none;
-      &:hover{
-        text-decoration: underline;
       }
     }
   }
