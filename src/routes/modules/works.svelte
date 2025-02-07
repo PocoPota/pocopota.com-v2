@@ -1,5 +1,10 @@
 <script>
   export let works_data;
+
+  // 時系列に並べる
+  works_data.items.sort((a, b) => {
+    return new Date(b.fields.date) - new Date(a.fields.date);
+  });
 </script>
 
 <ul>
