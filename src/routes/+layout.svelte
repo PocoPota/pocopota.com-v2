@@ -43,7 +43,11 @@
       <div><a href="{data.img_data.links.html}" target="_blank" rel="noopener noreferrer">Photo</a> by <a href="{data.img_data.user.links.html}" target="_blank" rel="noopener noreferrer">{data.img_data.user.name}</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
     {/if}
   </div>
-  <div class="copyright">©{year} PocoPota</div>
+  <ul>
+    <li><a href="/sitepolicy">サイトポリシー</a></li>
+    <li><a href="/privacypolicy">プライバシーポリシー</a></li>
+    <li>©{year} PocoPota</li>
+  </ul>
 </footer>
 
 <Background img_data={data.img_data}/>
@@ -124,9 +128,21 @@
         }
       }
     }
-    .copyright{
-      color: white;
-      font-size: 14px;
+    ul{
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      margin-top: 30px;
+      li{
+        list-style: none;
+        color: white;
+        font-size: 14px;
+        a{
+          color: white;
+          line-height: 1em;
+        }
+      }
     }
   }
 
