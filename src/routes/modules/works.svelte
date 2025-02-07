@@ -7,7 +7,7 @@
   });
 
   // 記事を9件に絞る
-  works_data.items = works_data.items.slice(0, 9);
+  works_data.items = works_data.items.slice(0, 6);
 </script>
 
 <ul>
