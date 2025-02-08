@@ -34,7 +34,7 @@
           {#if item.enclosure}
             <img src={item.enclosure['$'].url} alt="サムネイル">
           {:else}
-            <img src="/ex-thumb.png" alt="サムネイル">
+            <img src={`/ogp/${item.title}.png`} alt="サムネイル">
           {/if}
         </div>
         <div class="content">
