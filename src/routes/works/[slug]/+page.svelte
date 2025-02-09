@@ -11,9 +11,12 @@
       <img src={item.fields.thumbnail.fields.file.url} alt={item.fields.name}>
     </div>
     <div class="details">
-      <div class="date">公開時期：{item.fields.date}</div>
+      <div class="date">
+        <div class="small">公開時期</div>
+        <div>{item.fields.date}</div>
+      </div>
       <div class="tools">
-        <div>使用技術</div>
+        <div class="small">使用技術</div>
         <ul>
           {#each item.fields.devs as tool}
             <li>{tool}</li>
@@ -21,8 +24,18 @@
         </ul>
       </div>
       <div class="links">
-        <div>作品URL：<a href={item.fields.url} target="_blank">{item.fields.url}</a></div>
-        <div>GitHub：<a href={item.fields.repository} target="_blank">{item.fields.repository}</a></div>
+        <div>
+          <div class="small">作品URL</div>
+          <a href={item.fields.url} target="_blank" rel="noopener noreferrer">{item.fields.url}</a>
+        </div>
+        <div>
+          <div class="small">GitHub</div>
+          {#if item.fields.repository == "private"}
+            <div>private</div>
+          {:else}
+            <a href={item.fields.repository} target="_blank" rel="noopener noreferrer">{item.fields.repository}</a>
+          {/if}
+        </div>
       </div>
     </div>
   </div>
@@ -69,6 +82,15 @@
         }
       }
       .details{
+        margin-top: 15px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .small{
+          font-size: 13px;
+          color: #cfcfcf;
+        }
         .tools{
           ul{
             display: flex;
@@ -85,6 +107,11 @@
               }
             }
           }
+        }
+        .links{
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
         }
       }
     }
