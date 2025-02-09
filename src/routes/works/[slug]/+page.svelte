@@ -13,7 +13,7 @@
     <div class="details">
       <div class="date">公開時期：{item.fields.date}</div>
       <div class="tools">
-        <div>使用技術：</div>
+        <div>使用技術</div>
         <ul>
           {#each item.fields.devs as tool}
             <li>{tool}</li>
@@ -21,8 +21,8 @@
         </ul>
       </div>
       <div class="links">
-        <div>作品URL：{item.fields.url}</div>
-        <div>GitHub：{item.fields.repository}</div>
+        <div>作品URL：<a href={item.fields.url} target="_blank">{item.fields.url}</a></div>
+        <div>GitHub：<a href={item.fields.repository} target="_blank">{item.fields.repository}</a></div>
       </div>
     </div>
   </div>
@@ -68,6 +68,25 @@
           width: 100%;
         }
       }
+      .details{
+        .tools{
+          ul{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            li{
+              list-style: none;
+              &+li{
+                &::before{
+                  content: '/';
+                  margin: 0 5px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
     .row-right{
       .comments{
@@ -75,6 +94,12 @@
         margin: 0;
         li{
           list-style: none;
+          background: #ebebeb;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          color: #252525;
         }
       }
     }
