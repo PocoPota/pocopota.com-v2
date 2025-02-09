@@ -1,6 +1,11 @@
 <script>
   export let data;
   const item = data.item_data;
+
+  // コメント内のリンクをクリッカブルに
+  function linkify(text) {
+    return text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+  }
 </script>
 
 <h1>{item.fields.name}</h1>
@@ -43,7 +48,7 @@
   <div class="row-right">
     <ul class="comments">
       {#each item.fields.comments as comment}
-        <li>{comment}</li>
+        <li>{@html linkify(comment)}</li>
       {/each}
     </ul>
   </div>
