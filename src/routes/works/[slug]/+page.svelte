@@ -80,7 +80,7 @@
     display: flex;
     gap: 30px;
     .row-left{
-      width: 500px;
+      width: 390px;
       .thumbnail{
         img{
           width: 100%;
@@ -121,6 +121,7 @@
       }
     }
     .row-right{
+      width: calc(100% - 390px);
       .comments{
         padding: 0;
         margin: 0;
