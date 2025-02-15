@@ -36,3 +36,21 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+
+## 外部サービス
+
+- 背景画像
+
+背景画像にUnsplashを使用。API経由でビルド時にランダムな画像を取得してきます。  
+.envファイルにAPIのURLとアクセスキーを設定。
+
+- 作品データ
+
+作品のデータはContentfulで管理。  
+.envファイルにAPIのURLやspace id、env id、アクセストークンを設定。
+
+- RSS
+
+記事データ取得は各サービスのRSSを使用。  
+.envファイルにてZenn、はてなブログ、Hugo製個人ブログのRSSを設定済み。
