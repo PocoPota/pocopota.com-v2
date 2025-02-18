@@ -173,4 +173,11 @@
   :global(article a){
     color: rgb(186, 186, 255);
   }
+
+  // スマホレスポンシブ
+  @media screen and (max-width: 500px) {
+    main{
+      width: 100%;
+    }
+  }
 </style>

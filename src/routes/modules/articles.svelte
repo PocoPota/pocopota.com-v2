@@ -108,4 +108,14 @@
       }
     }
   }
+
+  // スマホレスポンシブ
+  @media screen and (max-width: 500px) {
+    ul{
+      li{
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
 </style>

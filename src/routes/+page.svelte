@@ -91,4 +91,11 @@
       }
     }
   }
+
+  // スマホレスポンシブ
+  @media screen and (max-width: 500px) {
+    section{
+      width: 90%;
+    }
+  }
 </style>
