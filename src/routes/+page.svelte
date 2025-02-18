@@ -97,5 +97,10 @@
     section{
       width: 90%;
     }
+    .columns{
+      .banners{
+        flex-wrap: wrap;
+      }
+    }
   }
 </style>
