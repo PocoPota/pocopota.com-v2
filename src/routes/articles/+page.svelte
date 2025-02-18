@@ -86,7 +86,7 @@
       }
       .thumbnail{
         width: 100%;
-        height: 157.5px;
+        aspect-ratio: 40/21;
         overflow: hidden;
         img{
           width: 100%;
