@@ -176,6 +176,13 @@
 
   // スマホレスポンシブ
   @media screen and (max-width: 500px) {
+    header{
+      width: 100%;
+      position: static;
+      .header-inner{
+        width: 100%;
+      }
+    }
     main{
       width: 100%;
     }

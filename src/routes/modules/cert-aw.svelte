@@ -16,8 +16,21 @@
     li {
       display: flex;
       justify-content: space-between;
-      span {
-        font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    ul{
+      width: 90%;
+      li{
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: start;
+        line-height: 1.2em;
+        span{
+          align-items: start;
+          margin-right: 10px;
+        }
       }
     }
   }
