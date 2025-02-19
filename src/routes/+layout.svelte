@@ -186,5 +186,13 @@
     main{
       width: 100%;
     }
+    footer{
+      ul{
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   }
 </style>
