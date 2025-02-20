@@ -115,6 +115,9 @@
       li{
         width: 90%;
         margin: 0 auto;
+        &:nth-child(4), &:nth-child(5), &:nth-child(6){
+          display: none;
+        }
       }
     }
   }
