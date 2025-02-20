@@ -1,5 +1,5 @@
 <script>
-  import Top from "./modules/top.svelte";
+  import Top from "./modules/about.svelte";
   import Skills from "./modules/skills.svelte";
   import Works from "./modules/works.svelte";
   import Articles from "./modules/articles.svelte";
