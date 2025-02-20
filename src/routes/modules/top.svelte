@@ -183,7 +183,7 @@
   @media screen and (max-width: 500px) {
     .top{
       flex-wrap: wrap;
-      margin-top: 150px;
+      margin-top: 100px;
       .links{
         width: 80%;
       }
