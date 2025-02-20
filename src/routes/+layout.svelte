@@ -194,5 +194,9 @@
         justify-content: center;
       }
     }
+    :global(article){
+      width: 85%;
+      padding: 5%;
+    }
   }
 </style>
