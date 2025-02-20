@@ -1,8 +1,8 @@
-<section class="top">
+<section class="about">
   <div class="icon">
     <img src="/pocopota.png" alt="PocoPota">
   </div>
-  <div class="about">
+  <div class="info">
     <div class="name">PocoPota<span>&lbrace;@PocoPota&#125;</span></div>
     <div class="title-content belong">
       <div>所属</div>
@@ -64,8 +64,8 @@
 </section>
 
 <style lang="scss">
-  // top
-  .top{
+  // about
+  .about{
     display: flex;
     justify-content: center;
     margin-top: 250px;
@@ -77,7 +77,7 @@
         border-radius: 50%;
       }
     }
-    .about{
+    .info{
       display: flex;
       flex-direction: column;
       gap: 7px;
@@ -181,7 +181,7 @@
 
   // スマホレスポンシブ
   @media screen and (max-width: 500px) {
-    .top{
+    .about{
       flex-wrap: wrap;
       margin-top: 100px;
       .links{
