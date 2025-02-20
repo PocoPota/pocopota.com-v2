@@ -73,4 +73,19 @@
       }
     }
   }
+
+  // スマホレスポンシブ
+  @media screen and (max-width: 500px) {
+    h1{
+      margin: 30px auto;
+    }
+    ul{
+      width: 90%;
+      margin-top: 100px;
+      li{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
 </style>
