@@ -140,4 +140,24 @@
   img{
     width: 300px;
   }
+
+  // スマホレスポンシブ
+  @media screen and (max-width: 500px) {
+    h1{
+      margin: 30px auto;
+    }
+    section{
+      width: 90%;
+      flex-direction: column;
+      .row-left{
+        width: 100%;
+        .details{
+          margin: 0;
+        }
+      }
+      .row-right{
+        width: 100%;
+      }
+    }
+  }
 </style>
