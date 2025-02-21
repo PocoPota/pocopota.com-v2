@@ -1,3 +1,9 @@
+<svelte:head>
+  <title>サイトポリシー | PocoPota</title>
+  <meta property="og:title" content="サイトポリシー | PocoPota" />
+  <meta property="og:url" content="https://pocopota.com/sitepolicy" />
+</svelte:head>
+
 <article>
   <h1>サイトポリシー</h1>
   <h2>サイトポリシーの適用範囲</h2>

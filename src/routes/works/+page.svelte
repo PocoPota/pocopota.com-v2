@@ -7,6 +7,12 @@
   });
 </script>
 
+<svelte:head>
+  <title>Works | PocoPota</title>
+  <meta property="og:title" content="Works | PocoPota" />
+  <meta property="og:url" content="https://pocopota.com/works" />
+</svelte:head>
+
 <h1>Works</h1>
 
 <ul>
