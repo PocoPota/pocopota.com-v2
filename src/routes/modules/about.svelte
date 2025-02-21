@@ -63,7 +63,19 @@
       </ul>
     </div>
   </div>
-  <div class="introduction"></div>
+  <div class="introduction">
+    <button id="new-btn" on:click={newBtn}>〈</button>
+    <ul>
+      <li></li>
+      <li class="intro-front">-1かなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
+      <li>0かなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
+      <li>1かなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
+      <li>2どうもどうもここには適当な自己紹介的な文章を入れたいと考えています。何かいい案ないかなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
+      <li>3どうもどうもここには適当な自己紹介的な文章を入れたいと考えています。何かいい案ないかなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
+      <li></li>
+    </ul>
+    <button id="prev-btn" on:click={prevBtn}>〉</button>
+  </div>
 </section>
 
 <style lang="scss">
@@ -182,7 +194,66 @@
         }
       }
     }
-  } 
+    .introduction{
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 120px;
+      position: relative;
+      button{
+        background: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 30px;
+        z-index: 2;
+        cursor: pointer;
+        user-select: none;
+      }
+      #new-btn{
+        left: 20px;
+        display: none;
+      }
+      #prev-btn{
+        right: 20px;
+      }
+      ul{
+        padding: 25px 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        li{
+          width: 70%;
+          min-width: 70%;
+          font-size: 15px;
+          list-style: none;
+          box-shadow: 0px 0px 29px -6px #777777;
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          padding: 20px;
+          color: white;
+          span{
+            display: block;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #cfcfcf;
+            text-align: end;
+          }
+          &:not(.intro-front){
+            display: none;
+          }
+          &:has(+ .intro-front), &.intro-front + li{
+            display: block;
+            opacity: 0.8;
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
 
   // スマホレスポンシブ
   @media screen and (max-width: 500px) {
