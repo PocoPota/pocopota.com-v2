@@ -1,3 +1,9 @@
+<svelte:head>
+  <title>プライバシーポリシー | PocoPota</title>
+  <meta property="og:title" content="プライバシーポリシー | PocoPota" />
+  <meta property="og:url" content="https://pocopota.com/privacypolicy" />
+</svelte:head>
+
 <article>
   <h1>プライバシーポリシー</h1>
   <h2>プライバシーポリシーの適用範囲</h2>

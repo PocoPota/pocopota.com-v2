@@ -8,6 +8,12 @@
   }
 </script>
 
+<svelte:head>
+  <title>{item.fields.name} | PocoPota</title>
+  <meta property="og:title" content="{item.fields.name} | PocoPota" />
+  <meta property="og:url" content="https://pocopota.com/works/{item.fields.id}" />
+</svelte:head>
+
 <h1>{item.fields.name}</h1>
 
 <section>

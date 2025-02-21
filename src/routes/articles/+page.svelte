@@ -1,3 +1,9 @@
+<svelte:head>
+  <title>Articles | PocoPota</title>
+  <meta property="og:title" content="Articles | PocoPota" />
+  <meta property="og:url" content="https://pocopota.com/articles" />
+</svelte:head>
+
 <script>
   export let data;
 

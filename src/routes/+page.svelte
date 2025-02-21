@@ -12,6 +12,12 @@
   let rssError = data.rss_data.error || false;
 </script>
 
+<svelte:head>
+  <title>PocoPota</title>
+  <meta property="og:title" content="PocoPota" />
+  <meta property="og:url" content="https://pocopota.com" />
+</svelte:head>
+
 <Top/>
 
 <section class="links">

@@ -101,9 +101,8 @@
     <button id="new-btn" on:click={newBtn}>〈</button>
     <ul>
       <li></li>
-      <li class="intro-front">a<span>2025.02.21</span></li>
+      <li class="intro-front">筑波大学に<a href="https://pocopota.hateblo.jp/entry/itf-coins-ac" target="_blank" rel="noopener noreferrer">AC入試で合格して</a>春から進学予定です。このサイトは来年から用なので悪しからず。Webフロントエンドがメインで、Svelteとてもいいのでは....？と最近思いつつ、バックエンドにも手を出しつつあります。<a href="https://zenn.dev/pocopota/articles/27e75ddf707113" target="_blank" rel="noopener noreferrer">CSSでアートで遊びます。</a>開発意外ではダーツにハマりかけそうになっていて、全くの初心者ですが楽しみたいです。進学後はいろんな技術系イベント等に参加したいなーとぼんやり考えてます。<span>2025.02.21</span></li>
       <li>趣味でWeb開発を行っている一般高校生です！WebアプリやブログなどのWeb関係を主に、Discord/LINE botの開発やマイクラサーバー(非公開)も動かしていたりします。開発以外にもパソコンで創作関係は興味があります。<span>2023.02.18</span></li>
-      <!-- <li>趣味でWeb開発を行っている一般高校生です！WebアプリやブログなどのWeb関係を主に、Discord/LINE botの開発やマイクラサーバー(非公開)も動かしていたりします。開発以外にもパソコンで創作関係は興味があります。<span>2023.02.18</span></li> -->
       <li></li>
     </ul>
     <button id="prev-btn" on:click={prevBtn}>〉</button>
@@ -268,6 +267,12 @@
           padding: 20px;
           color: white;
           transition: opacity 1s ease-in, transform 0.3s ease-in;
+          a{
+            color: white;
+            &:hover{
+              text-decoration: none;
+            }
+          }
           span{
             display: block;
             margin-top: 10px;
