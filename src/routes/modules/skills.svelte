@@ -69,20 +69,6 @@
       <img src="/skills/github.svg" alt="GitHubのアイコン">
     </div>
   </li>
-  <li>
-    <div>Python</div>
-    <div>★★☆☆☆</div>
-    <div>
-      <img src="/skills/python.svg" alt="Pythonのアイコン">
-    </div>
-  </li>
-  <li>
-    <div>GAS</div>
-    <div>★★★★☆</div>
-    <div>
-      <img src="/skills/gas.png" alt="GASのアイコン">
-    </div>
-  </li>
 </ul>
 
 <div class="skill-level">
@@ -109,7 +95,7 @@
     li{
       padding: 20px;
       list-style: none;
-      width: 130px;
+      width: 110px;
       display: flex;
       flex-direction: column;
       box-shadow: 0px 0px 29px -6px #777777;
@@ -126,15 +112,15 @@
           color: #f7b731;
         }
         &:nth-child(3){
-          width: 130px;
-          height: 100px;
+          width: 110px;
+          height: 90px;
           display: flex;
           justify-content: center;
           margin-top: 15px;
           img{
             object-fit: contain;
-            max-width: 110px;
-            max-height: 100px;
+            max-width: 100px;
+            max-height: 90px;
           }
         }
       }
@@ -142,7 +128,7 @@
   }
 
   .skill-level{
-    margin-top: 30px;
+    margin-top: 45px;
     div{
       text-align: center;
     }
