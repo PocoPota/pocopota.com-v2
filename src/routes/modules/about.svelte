@@ -1,3 +1,34 @@
+<script>
+  import { onMount } from 'svelte';
+
+  const newBtn = () => {
+    let tmp = document .querySelector(':has(+ .intro-front)');
+    let tmp2 = document .querySelector('.intro-front');
+    tmp2.classList.remove('intro-front');
+    tmp.classList.add('intro-front');
+    // 矢印判定
+    let newOne = document .querySelector(':has(+ .intro-front)');
+    if(newOne.innerHTML == ''){
+      document .getElementById('new-btn').style.display = 'none';
+    }else{
+      document .getElementById('prev-btn').style.display = 'block';
+    }
+  }
+  const prevBtn = () => {
+    let tmp = document .querySelector('.intro-front + li');
+    let tmp2 = document .querySelector('.intro-front');
+    tmp2.classList.remove('intro-front');
+    tmp.classList.add('intro-front');
+    // 矢印判定
+    let newOne = document .querySelector('.intro-front + li');
+    if(newOne.innerHTML == ''){
+      document .getElementById('prev-btn').style.display = 'none';
+    }else{
+      document .getElementById('new-btn').style.display = 'block';
+    }
+  }
+</script>
+
 <section class="about">
   <div class="about-about">
     <div class="icon">
