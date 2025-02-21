@@ -266,6 +266,7 @@
           border-radius: 20px;
           padding: 20px;
           color: white;
+          transition: opacity 1s ease-in, transform 0.3s ease-in;
           span{
             display: block;
             margin-top: 10px;
