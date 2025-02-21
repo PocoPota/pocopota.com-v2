@@ -6,23 +6,26 @@
     let tmp2 = document .querySelector('.intro-front');
     tmp2.classList.remove('intro-front');
     tmp.classList.add('intro-front');
-    // 矢印判定
-    let newOne = document .querySelector(':has(+ .intro-front)');
-    if(newOne.innerHTML == ''){
-      document .getElementById('new-btn').style.display = 'none';
-    }else{
-      document .getElementById('prev-btn').style.display = 'block';
-    }
+    btnCheck();
   }
   const prevBtn = () => {
     let tmp = document .querySelector('.intro-front + li');
     let tmp2 = document .querySelector('.intro-front');
     tmp2.classList.remove('intro-front');
     tmp.classList.add('intro-front');
+    btnCheck();
+  }
+  const btnCheck = () => {
     // 矢印判定
-    let newOne = document .querySelector('.intro-front + li');
-    if(newOne.innerHTML == ''){
+    let prevOne = document .querySelector('.intro-front + li');
+    if(prevOne.innerHTML == ''){
       document .getElementById('prev-btn').style.display = 'none';
+    }else{
+      document .getElementById('prev-btn').style.display = 'block';
+    }
+    let newOne = document .querySelector(':has(+ .intro-front)');
+    if(newOne.innerHTML == ''){
+      document .getElementById('new-btn').style.display = 'none';
     }else{
       document .getElementById('new-btn').style.display = 'block';
     }
@@ -98,11 +101,9 @@
     <button id="new-btn" on:click={newBtn}>〈</button>
     <ul>
       <li></li>
-      <li class="intro-front">-1かなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
-      <li>0かなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
-      <li>1かなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
-      <li>2どうもどうもここには適当な自己紹介的な文章を入れたいと考えています。何かいい案ないかなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
-      <li>3どうもどうもここには適当な自己紹介的な文章を入れたいと考えています。何かいい案ないかなーと探っていますが、何もいい感じの案が思いつきません。誰か案をください。例えば最近の興味だとか開発関係意外の趣味とかが良いとは思うのですが。。。。<span>2025.02.20</span></li>
+      <li class="intro-front">a<span>2025.02.21</span></li>
+      <li>趣味でWeb開発を行っている一般高校生です！WebアプリやブログなどのWeb関係を主に、Discord/LINE botの開発やマイクラサーバー(非公開)も動かしていたりします。開発以外にもパソコンで創作関係は興味があります。<span>2023.02.18</span></li>
+      <!-- <li>趣味でWeb開発を行っている一般高校生です！WebアプリやブログなどのWeb関係を主に、Discord/LINE botの開発やマイクラサーバー(非公開)も動かしていたりします。開発以外にもパソコンで創作関係は興味があります。<span>2023.02.18</span></li> -->
       <li></li>
     </ul>
     <button id="prev-btn" on:click={prevBtn}>〉</button>
