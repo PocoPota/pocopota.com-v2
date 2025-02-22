@@ -82,7 +82,7 @@
   </ul>
 </div>
 
-<div class="others">その他利用経験あり：Contentful / Docker /  Docusaurus /  GitHub Pages / Gatsby / HUGO / Netlify / Node.js / Postman / Vercel / Vivliostyle / WordPress / docsify / jQuery / microCMS / はてなブログ etc...</div>
+<div class="others">その他利用経験あり：Contentful / Docker /  Docusaurus / GitHub / GitHub Pages / Gatsby / HUGO / Netlify / Node.js / Postman / Python / Vercel / Vivliostyle / WordPress / docsify / jQuery / microCMS / はてなブログ etc...</div>
 
 <style lang="scss">
   .skill-cards{
