@@ -21,6 +21,10 @@ const config = {
 	prerender: {
 		entries: ['*']  // 全ページを prerender する
 	},
+	paths: {
+		base: '',
+		assets: ''
+	},
 	preprocess: vitePreprocess()
 };
 
