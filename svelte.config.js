@@ -16,7 +16,11 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		paths: {
+      assets: '', // '' で root 相対パスで読ませる
+      base: ''
+    }
 	},
 	preprocess: vitePreprocess()
 };
