@@ -16,7 +16,14 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		prerender: {
+			entries: ['*']  // 全ページを prerender する
+		},
+		paths: {
+			base: '',
+			assets: ''
+		},
 	},
 	preprocess: vitePreprocess()
 };
