@@ -16,11 +16,7 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		}),
-		paths: {
-      base: '',
-      assets: ''
-    }
+		})
 	},
 	preprocess: vitePreprocess()
 };
