@@ -18,6 +18,9 @@ const config = {
 			strict: true
 		})
 	},
+	prerender: {
+		entries: ['*']  // 全ページを prerender する
+	},
 	preprocess: vitePreprocess()
 };
 
