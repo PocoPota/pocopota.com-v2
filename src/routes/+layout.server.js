@@ -20,11 +20,9 @@ export async function load({ fetch }) {
       const fileContent = await fs.readFile(filePath, 'utf-8');
       const data = JSON.parse(fileContent);
       img_data = data;
-    }
-    catch(e){
+    }catch(e){
       img_data = {'error': true, 'message': e.message};
     }
-    img_data = {'error': true, 'message': e.message};
   }
 
   return {
