@@ -12,7 +12,12 @@
   let rssError = data.rss_data.error || false;
 
   // 名刺モード
-  const orientation = screen.orientation.type;
+  import { browser } from '$app/environment';
+  let orientation = '';
+  
+  if (browser && screen?.orientation) {
+    orientation = screen.orientation.type;
+  }
   
 </script>
 
