@@ -10,6 +10,10 @@
   // fetchエラーチェック
   let contentfulError = data.works_data.error || false;
   let rssError = data.rss_data.error || false;
+
+  // 名刺モード
+  const orientation = screen.orientation.type;
+  
 </script>
 
 <svelte:head>
@@ -17,6 +21,10 @@
   <meta property="og:title" content="PocoPota" />
   <meta property="og:url" content="https://pocopota.com" />
 </svelte:head>
+
+{#if orientation === "landscape-primary"}
+  <div id="namecard">Hello NameCard!</div>
+{/if}
 
 <Top/>
 
@@ -102,6 +110,19 @@
         }
       }
     }
+  }
+
+  // 名刺
+  #namecard{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: white;
+    width: 200px;
+    height: 100px;
+    color: black;
   }
 
   // スマホレスポンシブ
