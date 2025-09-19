@@ -4,18 +4,14 @@ import sharp from 'sharp'
 import fs from 'fs'
 
 export const generateOgpImage = async (title) => {
-  // フォントデータを読み込み（失敗時はフォールバック）
   let fontData = undefined
   try {
     fontData = fs.readFileSync('./fonts/NotoSansJP-Bold.ttf')
   } catch (e) {
-    // フォント読込に失敗しても画像生成は継続
     fontData = undefined
   }
 
   let titleSize = 55;
-
-  // JSX から画像を生成する
   const svg = await satori(
     <div
       style={{
@@ -26,14 +22,11 @@ export const generateOgpImage = async (title) => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'stretch',
-        // 明るい基調へ（黒背景上でもコントラスト確保）
         backgroundImage:
           'linear-gradient(135deg, #f9fbff 0%, #eef4fb 50%, #f9fbff 100%)',
         color: '#0c1721',
       }}
     >
-
-      {/* 余白とインナー枠線（ガラス感） */}
       <div
         style={{
           padding: 44,
@@ -41,15 +34,12 @@ export const generateOgpImage = async (title) => {
           width: '100%',
           display: 'flex',
           position: 'relative',
-          // カラーフレーム（縁色）：より濃いトーン
           backgroundImage:
             'linear-gradient(135deg, #6aa0d8 0%, #3d77b6 50%, #2e65a3 100%)',
-          // 外枠の角丸をなくす
           borderRadius: 0,
           overflow: 'hidden',
         }}
       >
-        {/* 縁エフェクト: 斜めストライプのハイライト（薄く） */}
         <div
           style={{
             position: 'absolute',
@@ -59,7 +49,6 @@ export const generateOgpImage = async (title) => {
               'repeating-linear-gradient(45deg, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 6px, rgba(255,255,255,0.0) 6px, rgba(255,255,255,0.0) 14px)',
           }}
         />
-        {/* 縁エフェクト: ソフトグロス（左上にかかる柔らかい光） */}
         <div
           style={{
             position: 'absolute',
@@ -76,7 +65,6 @@ export const generateOgpImage = async (title) => {
             width: '100%',
             borderRadius: 24,
             border: '1px solid rgba(9,21,37,0.08)',
-            // 内側カードは明るい面（ホワイト）
             background: '#ffffff',
             display: 'flex',
             flexDirection: 'column',
@@ -85,9 +73,6 @@ export const generateOgpImage = async (title) => {
             zIndex: 1,
           }}
         >
-          {/* カード内の追加エフェクト・バッジ類は削除 */}
-
-          {/* タイトル */}
           <div
             style={{
               position: 'relative',
@@ -111,8 +96,6 @@ export const generateOgpImage = async (title) => {
               {title}
             </div>
           </div>
-
-          {/* 下部情報行：左=アバター+サイト名、右=ドメイン */}
           <div
             style={{
               display: 'flex',
@@ -150,8 +133,6 @@ export const generateOgpImage = async (title) => {
         : [],
     },
   )
-
-  // SVG から PNG 形式に変換する
   const png = await sharp(Buffer.from(svg)).png().toBuffer()
 
   return png
