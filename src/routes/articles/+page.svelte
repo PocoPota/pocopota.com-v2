@@ -11,12 +11,33 @@
   let zennArticles = data.rss_data.zenn.rss.channel.item;
   let hatenaArticles = data.rss_data.hatena.rss.channel.item;
   let blogArticles = data.rss_data.blog.rss.channel.item;
+  let qiitaArticles = data.rss_data.qiita?.feed?.entry || [];
+
+  // 配列でない場合は配列に変換
+  if (!Array.isArray(zennArticles)) zennArticles = [zennArticles];
+  if (!Array.isArray(hatenaArticles)) hatenaArticles = [hatenaArticles];
+  if (!Array.isArray(blogArticles)) blogArticles = [blogArticles];
+  if (!Array.isArray(qiitaArticles)) qiitaArticles = [qiitaArticles];
+
+  // Atom フィード項目を RSS 形式に正規化
+  function normalizeAtomEntry(entry) {
+    return {
+      title: entry.title,
+      link: entry.link?.$.href || entry.link,
+      pubDate: entry.published || entry.updated,
+      enclosure: null // Atom フィードにはenclosureがない
+    };
+  }
+
+  // Qiita記事を正規化
+  qiitaArticles = qiitaArticles.filter(entry => entry).map(normalizeAtomEntry);
 
   // 記事を統合
   let articles = [
     ...zennArticles,
     ...hatenaArticles,
-    ...blogArticles
+    ...blogArticles,
+    ...qiitaArticles
   ];
 
   // 全ての記事を時系列に並べる

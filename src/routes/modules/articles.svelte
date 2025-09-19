@@ -2,15 +2,36 @@
   export let rss_data;
 
   // 記事データの取得
-  let zennArticles = rss_data.zenn.rss.channel.item;
-  let hatenaArticles = rss_data.hatena.rss.channel.item;
-  let blogArticles = rss_data.blog.rss.channel.item;
+  let zennArticles = rss_data.zenn?.rss?.channel?.item || [];
+  let hatenaArticles = rss_data.hatena?.rss?.channel?.item || [];
+  let blogArticles = rss_data.blog?.rss?.channel?.item || [];
+  let qiitaArticles = rss_data.qiita?.feed?.entry || [];
+
+  // 配列でない場合は配列に変換
+  if (!Array.isArray(zennArticles)) zennArticles = [zennArticles];
+  if (!Array.isArray(hatenaArticles)) hatenaArticles = [hatenaArticles];
+  if (!Array.isArray(blogArticles)) blogArticles = [blogArticles];
+  if (!Array.isArray(qiitaArticles)) qiitaArticles = [qiitaArticles];
+
+  // Atom フィード項目を RSS 形式に正規化
+  function normalizeAtomEntry(entry) {
+    return {
+      title: entry.title,
+      link: entry.link?.$.href || entry.link,
+      pubDate: entry.published || entry.updated,
+      enclosure: null // Atom フィードにはenclosureがない
+    };
+  }
+
+  // Qiita記事を正規化
+  qiitaArticles = qiitaArticles.filter(entry => entry).map(normalizeAtomEntry);
 
   // 記事を統合
   let articles = [
     ...zennArticles.slice(0, 6),
     ...hatenaArticles.slice(0, 6),
-    ...blogArticles.slice(0, 6)
+    ...blogArticles.slice(0, 6),
+    ...qiitaArticles.slice(0, 6)
   ];
 
   // 全ての記事を統合・時系列に並べる
@@ -35,7 +56,7 @@
           {#if item.enclosure}
             <img src={item.enclosure['$'].url} alt="サムネイル">
           {:else}
-            <img src="/ex-thumb.png" alt="サムネイル">
+          <img src={`/ogp/${item.title}.png`} alt="サムネイル">
           {/if}
         </div>
         <div class="content">
