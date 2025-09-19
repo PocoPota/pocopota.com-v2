@@ -13,13 +13,7 @@ export const generateOgpImage = async (title) => {
     fontData = undefined
   }
 
-  // タイトルの動的フォントサイズ（長い場合は自動縮小）
-  const len = (title || '').length
-  let titleSize = 84
-  if (len > 26) titleSize = 72
-  if (len > 40) titleSize = 60
-  if (len > 56) titleSize = 48
-  if (len > 72) titleSize = 42
+  let titleSize = 55;
 
   // JSX から画像を生成する
   const svg = await satori(
