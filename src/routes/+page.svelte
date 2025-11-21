@@ -15,7 +15,7 @@
 <svelte:head>
   <title>PocoPota</title>
   <meta property="og:title" content="PocoPota" />
-  <meta property="og:url" content="https://pocopota.com" />
+  <meta property="og:url" content="https://pocopota.io" />
 </svelte:head>
 
 <Top/>

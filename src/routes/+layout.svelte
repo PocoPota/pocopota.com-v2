@@ -27,7 +27,7 @@
 <header style="--blur-ratio: blur({blurRatio});">
   <div class="header-inner">
     <div class="header-logo">
-      <a href="/">PocoPota.com</a>
+      <a href="/">PocoPota.io</a>
     </div>
   </div>
 </header>

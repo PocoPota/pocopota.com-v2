@@ -1,7 +1,7 @@
 <svelte:head>
   <title>プライバシーポリシー | PocoPota</title>
   <meta property="og:title" content="プライバシーポリシー | PocoPota" />
-  <meta property="og:url" content="https://pocopota.com/privacypolicy" />
+  <meta property="og:url" content="https://pocopota.io/privacypolicy" />
 </svelte:head>
 
 <article>

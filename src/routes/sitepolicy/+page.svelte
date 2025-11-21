@@ -1,7 +1,7 @@
 <svelte:head>
   <title>サイトポリシー | PocoPota</title>
   <meta property="og:title" content="サイトポリシー | PocoPota" />
-  <meta property="og:url" content="https://pocopota.com/sitepolicy" />
+  <meta property="og:url" content="https://pocopota.io/sitepolicy" />
 </svelte:head>
 
 <article>
