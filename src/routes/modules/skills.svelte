@@ -3,35 +3,35 @@
     <div>Next.js</div>
     <!-- <div>★★★★★</div> -->
     <div>
-      <img src="/skills/nextjs.png" alt="Next.jsのアイコン">
+      <img src="/skills/nextjs.png" alt="Next.jsのアイコン" />
     </div>
   </li>
   <li>
     <div>React</div>
     <!-- <div>★★★★★</div> -->
     <div>
-      <img src="/skills/react.svg" alt="Reactのアイコン">
+      <img src="/skills/react.svg" alt="Reactのアイコン" />
     </div>
   </li>
   <li>
     <div>TypeScript</div>
     <!-- <div>★★★★★</div> -->
     <div>
-      <img src="/skills/ts.png" alt="TypeScriptのアイコン">
+      <img src="/skills/ts.png" alt="TypeScriptのアイコン" />
     </div>
   </li>
   <li>
     <div>CSS</div>
     <!-- <div>★★★★★</div> -->
     <div>
-      <img src="/skills/css.png" alt="CSSのアイコン">
+      <img src="/skills/css.png" alt="CSSのアイコン" />
     </div>
   </li>
   <li>
     <div>Sass</div>
     <!-- <div>★★★★☆</div> -->
     <div>
-      <img src="/skills/sass.png" alt="Sassのアイコン">
+      <img src="/skills/sass.png" alt="Sassのアイコン" />
     </div>
   </li>
 </ul>
@@ -47,17 +47,26 @@
   </ul>
 </div> -->
 
-<div class="others">その他利用経験あり：Astro / Claude Code / Codex / Contentful / CSS / Dify / Docker / Docusaurus / docsify / ESLint / Firebase / GAS / Gatsby / Gemini API / GitHub / GitHub Pages / HTML / HUGO / はてなブログ / JavaScript / jQuery / microCMS / MySQL / Netlify / Next.js / Node.js / OpenAI API / PHP / Prettier / Python / React / Sass / Svelte / SvelteKit / supabase / TanStack Router / TypeScript / Vercel / Vivliostyle / WordPress / Zod etc...</div>
+<div class="others">
+  その他利用経験あり：Astro / Claude Code / Codex / Contentful / CSS / Dify /
+  Docker / Docusaurus / docsify / ESLint / Firebase / GAS / Gatsby / Gemini API
+  / GitHub / GitHub Pages / HTML / HUGO / はてなブログ / JavaScript / jQuery /
+  microCMS / MySQL / Netlify / Next.js / Node.js / OpenAI API / PHP / Prettier /
+  Python / React / Sass / Svelte / SvelteKit / supabase / TanStack Router /
+  TypeScript / Vercel / Vivliostyle / WordPress / Zod etc...
+</div>
+
+<div class="more-read"><a href="/skills">もっと見る</a></div>
 
 <style lang="scss">
-  .skill-cards{
+  .skill-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin: 0;
     padding: 0;
-    li{
+    li {
       padding: 20px;
       list-style: none;
       width: 110px;
@@ -66,24 +75,24 @@
       box-shadow: 0px 0px 29px -6px #777777;
       backdrop-filter: blur(10px);
       border-radius: 20px;
-      div{
+      div {
         text-align: center;
-        &:nth-child(1){
+        &:nth-child(1) {
           font-size: 18px;
           font-weight: 800;
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           font-size: 17px;
           color: #f7b731;
         }
-        &:nth-child(2){
-        // &:nth-child(3){
+        &:nth-child(2) {
+          // &:nth-child(3){
           width: 110px;
           height: 90px;
           display: flex;
           justify-content: center;
           margin-top: 15px;
-          img{
+          img {
             object-fit: contain;
             max-width: 100px;
             max-height: 90px;
@@ -93,27 +102,40 @@
     }
   }
 
-  .skill-level{
+  .skill-level {
     margin-top: 45px;
-    div{
+    div {
       text-align: center;
     }
-    ul{
+    ul {
       list-style: none;
       padding: 0;
       margin: 0 auto;
       width: 325px;
-      li{
-        span{
+      li {
+        span {
           color: #f7b731;
         }
       }
     }
   }
 
-  .others{
+  .others {
     margin: 0 auto;
     margin-top: 40px;
     width: 90%;
+  }
+
+  .more-read {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 </style>
