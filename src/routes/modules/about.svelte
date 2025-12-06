@@ -268,7 +268,9 @@
           border-radius: 20px;
           padding: 20px;
           color: white;
-          transition: opacity 1s ease-in, transform 0.3s ease-in;
+          transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+                      opacity 300ms ease-out;
+          will-change: transform, opacity;
           a{
             color: white;
             &:hover{
@@ -285,10 +287,22 @@
           &:not(.intro-front){
             display: none;
           }
-          &:has(+ .intro-front), &.intro-front + li{
+          /* center (front) card */
+          &.intro-front{
+            opacity: 1;
+            transform: translateX(0) scale(1);
+          }
+          /* left neighbor (previous) */
+          &:has(+ .intro-front){
             display: block;
-            opacity: 0.8;
-            transform: scale(0.9);
+            opacity: 0.85;
+            transform: translateX(-14px) scale(0.96);
+          }
+          /* right neighbor (next) */
+          &.intro-front + li{
+            display: block;
+            opacity: 0.85;
+            transform: translateX(14px) scale(0.96);
           }
         }
       }
@@ -305,6 +319,13 @@
           width: 80%;
         }
       }
+    }
+  }
+
+  /* respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .about .introduction ul li{
+      transition: none;
     }
   }
 </style>
