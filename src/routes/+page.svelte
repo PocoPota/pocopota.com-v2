@@ -21,14 +21,14 @@
 
 <Top/>
 
-<section class="links">
-  <div class="sec-title">Skills</div>
-  <Skills/>
-</section>
-
 <section class="interest">
   <div class="sec-title">Interest</div>
   <Interest/>
+</section>
+
+<section class="links">
+  <div class="sec-title">Skills</div>
+  <Skills/>
 </section>
 
 {#if !contentfulError}
