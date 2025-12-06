@@ -1,77 +1,42 @@
 <ul class="skill-cards">
   <li>
-    <div>HTML</div>
-    <div>★★★★★</div>
-    <div>
-      <img src="/skills/html.svg" alt="HTMLのアイコン">
-    </div>
-  </li>
-  <li>
-    <div>CSS</div>
-    <div>★★★★★</div>
-    <div>
-      <img src="/skills/css.png" alt="CSSのアイコン">
-    </div>
-  </li>
-  <li>
-    <div>JavaScript</div>
-    <div>★★★★★</div>
-    <div>
-      <img src="/skills/javascript.png" alt="JavaScriptのアイコン">
-    </div>
-  </li>
-  <li>
-    <div>PHP</div>
-    <div>★★★★★</div>
-    <div>
-      <img src="/skills/php.svg" alt="PHPのアイコン">
-    </div>
-  </li>
-  <li>
-    <div>Sass</div>
-    <div>★★★★☆</div>
-    <div>
-      <img src="/skills/sass.png" alt="Sassのアイコン">
-    </div>
-  </li>
-  <li>
-    <div>React</div>
-    <div>★★★☆☆</div>
-    <div>
-      <img src="/skills/react.svg" alt="Reactのアイコン">
-    </div>
-  </li>
-  <li>
     <div>Next.js</div>
-    <div>★★★☆☆</div>
+    <!-- <div>★★★★★</div> -->
     <div>
       <img src="/skills/nextjs.png" alt="Next.jsのアイコン">
     </div>
   </li>
   <li>
-    <div>Svelte (Kit)</div>
-    <div>★★★☆☆</div>
+    <div>React</div>
+    <!-- <div>★★★★★</div> -->
     <div>
-      <img src="/skills/svelte.png" alt="Svelteのアイコン">
+      <img src="/skills/react.svg" alt="Reactのアイコン">
     </div>
   </li>
   <li>
-    <div>MySQL</div>
-    <div>★★★☆☆</div>
+    <div>TypeScript</div>
+    <!-- <div>★★★★★</div> -->
     <div>
-      <img src="/skills/mysql.png" alt="MySQLのアイコン">
+      <img src="/skills/ts.png" alt="TypeScriptのアイコン">
     </div>
   </li>
   <li>
-    <div>GitHub</div>
-    <div>★★★☆☆</div>
+    <div>CSS</div>
+    <!-- <div>★★★★★</div> -->
     <div>
-      <img src="/skills/github.svg" alt="GitHubのアイコン">
+      <img src="/skills/css.png" alt="CSSのアイコン">
+    </div>
+  </li>
+  <li>
+    <div>Sass</div>
+    <!-- <div>★★★★☆</div> -->
+    <div>
+      <img src="/skills/sass.png" alt="Sassのアイコン">
     </div>
   </li>
 </ul>
 
-<div class="skill-level">
+<!-- <div class="skill-level">
   <div>スキルレベル目安</div>
   <ul>
     <li><span>★☆☆☆☆</span>：Hello World! 程度</li>
@@ -80,9 +45,9 @@
     <li><span>★★★★☆</span>：複雑めなサービス開発経験あり</li>
     <li><span>★★★★★</span>：複雑めなサービス複数回</li>
   </ul>
-</div>
+</div> -->
 
-<div class="others">その他利用経験あり：Contentful / Docker /  Docusaurus / GitHub / GitHub Pages / Gatsby / HUGO / Netlify / Node.js / Postman / Python / Vercel / Vivliostyle / WordPress / docsify / jQuery / microCMS / はてなブログ etc...</div>
+<div class="others">その他利用経験あり：Astro / Claude Code / Codex / Contentful / CSS / Dify / Docker / Docusaurus / docsify / ESLint / Firebase / GAS / Gatsby / Gemini API / GitHub / GitHub Pages / HTML / HUGO / はてなブログ / JavaScript / jQuery / microCMS / MySQL / Netlify / Next.js / Node.js / OpenAI API / PHP / Prettier / Python / React / Sass / Svelte / SvelteKit / supabase / TanStack Router / TypeScript / Vercel / Vivliostyle / WordPress / Zod etc...</div>
 
 <style lang="scss">
   .skill-cards{
@@ -111,7 +76,8 @@
           font-size: 17px;
           color: #f7b731;
         }
-        &:nth-child(3){
+        &:nth-child(2){
+        // &:nth-child(3){
           width: 110px;
           height: 90px;
           display: flex;
