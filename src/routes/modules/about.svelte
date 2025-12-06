@@ -101,6 +101,7 @@
     <button id="new-btn" on:click={newBtn}>〈</button>
     <ul>
       <li></li>
+      <li class="intro-front">大学生になって時間の経ちも早く、1年生も出口が見えてきました。入学後は趣味でも授業でもプログラムを書き、共同開発をする機会も多く、開発を楽しむことができています。特に生成AIと組み合わせた開発が多く、生成AIの自由度を活かしたプロダクトを作る楽しさを実感しています。最近では純粋な技術にも興味はもちろんありますが、UI/UXやアクセシビリティといった分野にも興味が出てきています。改めてセマンティックなHTMLや見やすいUIについて学びたいと思います。<span>2025.12.06</span></li>
       <li class="intro-front">筑波大学に<a href="https://pocopota.hateblo.jp/entry/itf-coins-ac" target="_blank" rel="noopener noreferrer">AC入試で合格して</a>春から進学予定です。このサイトは来年から用なので悪しからず。Webフロントエンドがメインで、Svelteとてもいいのでは....？と最近思いつつ、バックエンドにも手を出しつつあります。<a href="https://zenn.dev/pocopota/articles/27e75ddf707113" target="_blank" rel="noopener noreferrer">CSSでアートで遊びます。</a>開発以外ではダーツにハマりかけそうになっていて、全くの初心者ですが楽しみたいです。進学後はいろんな技術系イベント等に参加したいなーとぼんやり考えてます。<span>2025.02.21</span></li>
       <li>趣味でWeb開発を行っている一般高校生です！WebアプリやブログなどのWeb関係を主に、Discord/LINE botの開発やマイクラサーバー(非公開)も動かしていたりします。開発以外にもパソコンで創作関係は興味があります。<span>2023.02.18</span></li>
       <li></li>
