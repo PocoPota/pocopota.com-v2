@@ -1,6 +1,7 @@
 <script>
   import Top from "./modules/about.svelte";
   import Skills from "./modules/skills.svelte";
+  import Interest from "./modules/interest.svelte";
   import Works from "./modules/works.svelte";
   import Articles from "./modules/articles.svelte";
   import CertAw from "./modules/cert-aw.svelte";
@@ -23,6 +24,11 @@
 <section class="links">
   <div class="sec-title">Skills</div>
   <Skills/>
+</section>
+
+<section class="interest">
+  <div class="sec-title">Interest</div>
+  <Interest/>
 </section>
 
 {#if !contentfulError}
