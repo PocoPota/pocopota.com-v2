@@ -47,15 +47,6 @@
   </ul>
 </div> -->
 
-<div class="others">
-  その他利用経験あり：Astro / Claude Code / Codex / Contentful / CSS / Dify /
-  Docker / Docusaurus / docsify / ESLint / Firebase / GAS / Gatsby / Gemini API
-  / GitHub / GitHub Pages / HTML / HUGO / はてなブログ / JavaScript / jQuery /
-  microCMS / MySQL / Netlify / Next.js / Node.js / OpenAI API / PHP / Prettier /
-  Python / React / Sass / Svelte / SvelteKit / supabase / TanStack Router /
-  TypeScript / Vercel / Vivliostyle / WordPress / Zod etc...
-</div>
-
 <div class="more-read"><a href="/skills">もっと見る</a></div>
 
 <style lang="scss">
@@ -118,12 +109,6 @@
         }
       }
     }
-  }
-
-  .others {
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 90%;
   }
 
   .more-read {
