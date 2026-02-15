@@ -4,7 +4,6 @@
     <ul>
       <li>Webフロントエンド</li>
       <li>UI/UX・アクセシビリティ</li>
-      <li>情報整理・構造化</li>
     </ul>
   </div>
 
@@ -12,8 +11,6 @@
     <div>その他関心</div>
     <ul>
       <li>デザイン・タイポグラフィ</li>
-      <li>NLP・RAG・生成AI</li>
-      <li>生成AI×専門領域の応用</li>
       <li>データベース / Webセキュリティ</li>
     </ul>
   </div>
